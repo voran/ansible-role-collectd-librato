@@ -18,8 +18,6 @@ site.xml:
   roles:
     - { role: voran.collectd-librato, become: yes }
   vars:
-    librato_email: 'your-librato-email'
-    librato_token: 'your-librato-token'
     collectd_plugins:
       - cpu
       - load
