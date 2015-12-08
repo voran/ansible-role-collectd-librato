@@ -21,6 +21,7 @@ site.xml:
     librato_email: 'your-librato-email'
     librato_token: 'your-librato-token'
     collectd_plugins:
+      - cpu
       - load
       - memory
       - df

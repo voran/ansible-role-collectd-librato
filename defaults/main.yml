@@ -6,6 +6,7 @@ librato_token: ''
  # since it's required for the librato integration
  # you don't need to explicitly add it to the list below
 collectd_plugins:
+  - cpu
   - load
   - memory
   - df
