@@ -2,10 +2,12 @@
   apt: name=collectd state=present
 
 - name: Configured
-  template: src=collectd.conf.j2 dest=/etc/collectd/collectd.conf
-            owner=root group=root mode=644
-  notify:
-      - restart collectd
+  template: src=collectd.conf.j2 dest=/etc/collectd/collectd.conf owner=root group=root mode=644
+  register: collectd_config
+
+- name: Service Restarted
+  service: name=collectd state=restarted
+  when: collectd_config.changed
 
 - name: Service Running
   service: name=collectd state=started enabled=true
