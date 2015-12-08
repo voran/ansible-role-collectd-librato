@@ -1,0 +1,11 @@
+# defaults file for collectd-librato
+# at the very least, you need to set librato_email and librato_token
+librato_email: ''
+librato_token: ''
+ # note that the write_http plugin will always be included
+ # since it's required for the librato integration
+ # you don't need to explicitly add it to the list below
+collectd_plugins:
+  - load
+  - memory
+  - df
