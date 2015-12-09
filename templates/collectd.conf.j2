@@ -6,6 +6,14 @@ LoadPlugin write_http
 LoadPlugin {{ plugin }}
 {% endfor %}
 
+{% if 'df' in collectd_plugins %}
+<Plugin "df">
+  FSType "tmpfs"
+  FSType "devtmpfs"
+  IgnoreSelected true
+</Plugin>
+{% endif %}
+
 <Plugin write_http>
     <URL "https://collectd.librato.com/v1/measurements">
         User "{{ librato_email }}"
