@@ -23,6 +23,8 @@ site.xml:
       - load
       - memory
       - df
+      - disk
+      - swap
 ```
 
 Then use ansible-galaxy to invoke role:

@@ -10,3 +10,5 @@ collectd_plugins:
   - load
   - memory
   - df
+  - disk
+  - swap
