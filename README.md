@@ -1,25 +1,23 @@
-# README.md
-# Ansible Role: Collectd 5.x with Librato Integration
+
+## Ansible Role: Collectd 5.x with Librato Integration
 
 An Ansible role that installs Collectd 5.4.x with Librato integration targeting Ubuntu 14.04.
 
-## Role Variables
+### Role Variables
 
 For up-to-date role variables and their defaults, see defaults/main.yml
 
-## Dependencies
+### Dependencies
 
 None!
 
-## Example Playbook
+### Example Playbook
 site.xml:
 ```
 - hosts: webservers
   roles:
     - { role: voran.collectd-librato, become: yes }
   vars:
-    librato_email: 'your-librato-email'
-    librato_token: 'your-librato-token'
     collectd_plugins:
       - cpu
       - load
@@ -33,10 +31,10 @@ ansible-playbook site.yml -i hosts --extra-vars "librato_email=<your_librato_ema
 ```
 
 
-## License
+### License
 
 Apache 2.0
 
-## Credits
+### Credits
 
 Inspired by http://blog.pu-gh.com/2014/08/19/librato-collectd-integration/
