@@ -1,6 +1,8 @@
 Hostname    "{{ ansible_hostname }}"
 FQDNLookup   false
 
+Interval {{ collectd_interval }}
+
 LoadPlugin write_http
 {% for plugin in collectd_plugins %}
 LoadPlugin {{ plugin }}

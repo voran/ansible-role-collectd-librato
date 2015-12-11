@@ -18,6 +18,7 @@ site.xml:
   roles:
     - { role: voran.collectd-librato, become: yes }
   vars:
+    collectd_interval: 300
     collectd_plugins:
       - cpu
       - load
