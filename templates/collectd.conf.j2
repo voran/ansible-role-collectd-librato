@@ -21,7 +21,7 @@ LoadPlugin {{ plugin }}
 
 {% if 'cpu' not in collectd_plugins %}
 LoadPlugin cpu
-{% end %}
+{% endif %}
 
 LoadPlugin aggregation
 
