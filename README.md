@@ -20,12 +20,12 @@ site.xml:
   vars:
     collectd_interval: 300
     collectd_plugins:
-      - cpu
       - load
       - memory
       - df
       - disk
       - swap
+    collectd_aggregate_cpu_metrics: yes
 ```
 
 Then use ansible-galaxy to invoke role:
@@ -33,6 +33,7 @@ Then use ansible-galaxy to invoke role:
 ansible-playbook site.yml -i hosts --extra-vars "librato_email=<your_librato_email> librato_token=<your_librato_token>"
 ```
 
+To use aggregated cpu metrics with lbrato, see http://support.metrics.librato.com/knowledgebase/articles/404267-collectd-faq
 
 ### License
 
